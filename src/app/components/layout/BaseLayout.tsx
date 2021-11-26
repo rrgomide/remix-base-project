@@ -2,36 +2,47 @@ import { Link, NavLink } from 'remix'
 import { CONFIG } from '~/config/appConfig'
 import RemixLogo from '../_remix-default/RemixLogo'
 
+const activeStyle = {
+  borderBottom: '5px solid #444',
+  paddingBottom: 5,
+}
+
+const inactiveStyle = {
+  paddingBottom: 5,
+}
+
 export default function BaseLayout({ children }: React.PropsWithChildren<{}>) {
-  const linkActiveStyle = { textDecoration: 'underline' }
-
   return (
-    <div className="remix-app">
-      <header className="remix-app__header">
-        <div className="container remix-app__header-content">
-          <Link to="/" title="Remix" className="remix-app__header-home-link">
-            <RemixLogo />
-          </Link>
+    <div>
+      <header>
+        <nav aria-label="Main navigation">
+          <ul className="bg-red-200 flex flex-row items-center p-4">
+            <li>
+              <Link
+                to="/"
+                title="Remix"
+                className="remix-app__header-home-link"
+              >
+                <RemixLogo />
+              </Link>
+            </li>
 
-          <nav aria-label="Main navigation" className="remix-app__header-nav">
-            <ul>
-              {CONFIG.navbarVisibleRoutes.map(({ id, description, path }) => {
-                return (
-                  <li key={id}>
-                    <NavLink
-                      to={path}
-                      style={({ isActive }) =>
-                        isActive ? linkActiveStyle : {}
-                      }
-                    >
-                      {description}
-                    </NavLink>
-                  </li>
-                )
-              })}
-            </ul>
-          </nav>
-        </div>
+            {CONFIG.navbarVisibleRoutes.map(({ id, description, path }) => {
+              return (
+                <li key={id}>
+                  <NavLink
+                    to={path}
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : inactiveStyle
+                    }
+                  >
+                    {description}
+                  </NavLink>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
       </header>
 
       <div className="remix-app__main">

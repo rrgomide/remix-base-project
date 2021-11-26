@@ -5,22 +5,23 @@ import { Outlet, useCatch } from 'remix'
 import type { LinksFunction } from 'remix'
 
 /**
- * The Document component from Remix starter project
+ * The Document component from the original
+ * Remix starter project
  */
 import Document from './components/_remix-default/Document'
 
 /**
- * This BaseLayout component is already customized from
- * the original Layout component from Remix starter project
+ * Global styles powered by Tailwind CSS!
  */
-import BaseLayout from './components/layout/BaseLayout'
+import tailwindCssUrl from './styles/tailwind.css'
+import globalCssUrl from './styles/global.css'
 
 /**
- * Default styles from Remix starter project
+ * This BaseLayout component is already customized from
+ * the original Layout component used by the
+ * Remix starter project
  */
-import deleteMeRemixStyles from '~/styles/demos/remix.css'
-import globalStylesUrl from '~/styles/global.css'
-import darkStylesUrl from '~/styles/dark.css'
+import BaseLayout from './components/layout/BaseLayout'
 
 /**
  * The `links` export is a function that returns an array of objects that map to
@@ -42,23 +43,9 @@ export let links: LinksFunction = () => {
    */
   return [
     /**
-     * Global styles
+     * Tailwind styles
      */
-    { rel: 'stylesheet', href: globalStylesUrl },
-
-    /**
-     * Dark theme styles
-     */
-    {
-      rel: 'stylesheet',
-      href: darkStylesUrl,
-      media: '(prefers-color-scheme: dark)',
-    },
-
-    /**
-     * Start Remix app styles
-     */
-    { rel: 'stylesheet', href: deleteMeRemixStyles },
+    { rel: 'stylesheet', href: tailwindCssUrl },
   ]
 }
 
@@ -76,8 +63,8 @@ export default function App() {
     <Document title="A Remix Base Project">
       <BaseLayout>
         {/* Raphael Gomide: this Outlet component from 'remix' is magic!
-        It renders all the nested routes based on the files inside
-        the "root" folder */}
+        It renders all the nested routes based on the folder/files inside
+        the "routes" folder and of course the active route */}
         <Outlet />
       </BaseLayout>
     </Document>

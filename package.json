@@ -1,8 +1,9 @@
 {
   "private": true,
-  "name": "remix-app-template",
-  "description": "",
-  "license": "",
+  "version": "1.0.1",
+  "name": "remix-base-project",
+  "description": "A base project for Remix.",
+  "license": "MIT",
   "scripts": {
     "dev": "concurrently \"yarn dev:css\" \"remix dev\"",
     "dev:css": "tailwindcss -o ./app/styles/tailwind.css --watch",

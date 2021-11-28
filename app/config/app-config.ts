@@ -1,4 +1,4 @@
-import { serviceNewId } from '~/services/idService'
+import { serviceNewId } from '../services/idService'
 
 const ALL_ROUTES = Object.freeze([
   {
@@ -14,18 +14,9 @@ const ALL_ROUTES = Object.freeze([
     id: serviceNewId(),
 
     active: true,
-    description: 'Simple Projects',
+    description: 'Projects',
     navbarVisible: true,
-    path: '/simple-projects',
-  },
-
-  {
-    id: serviceNewId(),
-
-    active: true,
-    description: 'Documentation',
-    navbarVisible: true,
-    path: '/remix-documentation',
+    path: '/projects',
   },
 ])
 

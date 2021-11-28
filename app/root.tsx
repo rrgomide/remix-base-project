@@ -46,6 +46,11 @@ export let links: LinksFunction = () => {
      * Tailwind styles
      */
     { rel: 'stylesheet', href: tailwindCssUrl },
+
+    /**
+     * Global styles
+     */
+    { rel: 'stylesheet', href: globalCssUrl },
   ]
 }
 

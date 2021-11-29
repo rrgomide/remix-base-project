@@ -1,17 +1,19 @@
 import { Links, LiveReload, Meta, Scripts, ScrollRestoration } from 'remix'
-import RouteChangeAnnouncement from './RouteChangeAnnouncement'
+import RouteChangeAnnouncement from '../_remix-default/RouteChangeAnnouncement'
 
 export default function Document({
   children,
   title,
   lang = 'en',
+  theme = 'retro',
 }: {
   children: React.ReactNode
   title?: string
   lang?: string
+  theme?: string
 }) {
   return (
-    <html lang={lang}>
+    <html lang={lang} data-theme={theme}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />

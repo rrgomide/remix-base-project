@@ -5,3 +5,4 @@ node_modules
 /public/build
 /app/styles/tailwind.css
 .env
+yarn-error.log

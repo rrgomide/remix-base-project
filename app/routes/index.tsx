@@ -17,12 +17,18 @@ export default function Index() {
         </li>
 
         <li className="mb-4">
-          In my opinion, this is cleaner and more organized.
+          In my opinion, this base project is simpler, cleaner and more
+          organized.
         </li>
 
         <li className="mb-4">
           It also includes <a href="https://tailwindcss.com/">Tailwind CSS</a>{' '}
-          as the default CSS framework.
+          as the default CSS framework. The config has also been done based on
+          the{' '}
+          <a href="https://remix.run/docs/en/v1/guides/styling#tailwind">
+            official docs
+          </a>
+          .
         </li>
 
         <li className="mb-4">
@@ -35,11 +41,8 @@ export default function Index() {
         </li>
 
         <li>
-          For more information, check out my Github repository at{' '}
-          <a href="https://github.com/rrgomide/remix-base-project">
-            https://github.com/rrgomide/remix-base-project
-          </a>
-          .
+          For more information, check out my Github repository{' '}
+          <a href="https://github.com/rrgomide/remix-base-project">here</a>.
         </li>
       </ul>
     </div>

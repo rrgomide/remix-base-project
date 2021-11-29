@@ -3,7 +3,7 @@ module.exports = {
 
   purge: ['./app/**/*.tsx', './app/**/*.jsx', './app/**/*.js', './app/**/*.ts'],
 
-  darkMode: 'media', // true/false | 'media' | 'class''
+  darkMode: 'false', // true/false | 'media' | 'class''
 
   theme: {
     extend: {},
@@ -11,5 +11,14 @@ module.exports = {
 
   variants: {},
 
-  plugins: [],
+  plugins: [require('daisyui')],
+
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+  },
 }

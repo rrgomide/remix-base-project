@@ -8,7 +8,7 @@ import type { LinksFunction } from 'remix'
  * The Document component from the original
  * Remix starter project
  */
-import Document from './components/_remix-default/Document'
+import Document from './components/layout/Document'
 
 /**
  * Global styles powered by Tailwind CSS!
@@ -22,6 +22,7 @@ import globalCssUrl from './styles/global.css'
  * Remix starter project
  */
 import BaseLayout from './components/layout/BaseLayout'
+import { CONFIG } from './config/app-config'
 
 /**
  * The `links` export is a function that returns an array of objects that map to
@@ -65,7 +66,7 @@ export let links: LinksFunction = () => {
  */
 export default function App() {
   return (
-    <Document title="A Remix Base Project">
+    <Document title="A Remix Base Project" theme={CONFIG.defaultTheme}>
       <BaseLayout>
         {/* Raphael Gomide: this Outlet component from 'remix' is magic!
         It renders all the nested routes based on the folder/files inside

@@ -15,7 +15,7 @@ export default function MainHeader() {
   return (
     <header>
       <nav aria-label="Main navigation">
-        <ul className="bg-gray-200 flex flex-row items-center justify-between p-4">
+        <ul className="flex flex-row items-center justify-between p-4">
           <li>
             <Link to="/" title="Remix">
               <RemixLogo />

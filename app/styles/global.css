@@ -1,7 +1,7 @@
-a {
+/* a {
   color: rgb(13, 51, 87);
   font-weight: bold;
-}
+} */
 
 a:hover {
   text-decoration: underline;
